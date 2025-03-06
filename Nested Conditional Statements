@@ -1,0 +1,13 @@
+age = 30
+has_permission = True
+
+if age >= 18:
+    print("You are an adult.")
+    
+    # Nested condition: Check if the person has permission
+    if has_permission:
+        print("You have permission to access the restricted area.")
+    else:
+        print("You don't have permission to access the restricted area.")
+else:
+    print("You are a minor and don't have access.")
