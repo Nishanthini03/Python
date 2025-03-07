@@ -1,0 +1,33 @@
+def greet():
+    print("Hello, welcome!")
+
+greet()  # Calling the function
+
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Nishanthini")  # Calling with an argument
+
+def add(a, b):
+    return a + b  # Returning the sum
+
+result = add(5, 3)
+print(result)
+
+
+def power(base, exponent=2):  # Default exponent is 2
+    return base ** exponent
+
+print(power(3))     # Uses default exponent 2 → 3^2 = 9
+print(power(3, 3))  # Overrides default → 3^3 = 27
+
+
+def calculate(a, b):
+    sum_ = a + b
+    product = a * b
+    return sum_, product  # Returning multiple values
+
+s, p = calculate(4, 5)
+print("Sum:", s)
+print("Product:", p)
+
