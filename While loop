@@ -1,0 +1,20 @@
+count = 0
+while count < 5:
+    print("Count:", count)
+    count += 1
+num = 1
+while num <= 10:
+    if num == 5:
+        break  # Exit the loop when num is 5
+    print(num)
+    num += 1
+num = 0
+while num < 5:
+    num += 1
+    if num == 3:
+        continue  # Skip printing 3
+    print(num)
+while True:
+    user_input = input("Enter 'exit' to stop: ")
+    if user_input.lower() == 'exit':
+        break
