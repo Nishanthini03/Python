@@ -1,0 +1,20 @@
+class BankAccount:
+    def __init__(self, account_number, balance):
+        self.account_number = account_number   # Public attribute
+        self.__balance = balance  # Private attribute (prefix with __)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return f"Deposited: {amount}, New Balance: {self.__balance}"
+        return "Invalid amount"
+
+    def get_balance(self):
+        return self.__balance
+
+# Creating an instance
+account = BankAccount("12345", 1000)
+print(account.deposit(500))  # Output: Deposited: 500, New Balance: 1500
+print(account.get_balance())  # Output: 1500
+
+# print(account.__balance)  # This would cause an error since __balance is private
