@@ -1,0 +1,104 @@
+#List Slicing
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(numbers[2:6])   # Output: [2, 3, 4, 5] (From index 2 to 5)
+print(numbers[:4])    # Output: [0, 1, 2, 3] (First 4 elements)
+print(numbers[5:])    # Output: [5, 6, 7, 8, 9] (From index 5 to end)
+print(numbers[::2])   # Output: [0, 2, 4, 6, 8] (Every second element)
+print(numbers[::-1])  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] (Reversed)
+
+#List Methods (Functions on Lists)
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
+
+numbers.append(7)      # Adds 7 to the end
+numbers.extend([8, 10]) # Adds multiple elements
+numbers.insert(2, 99)   # Inserts 99 at index 2
+numbers.remove(1)       # Removes the first occurrence of 1
+numbers.pop()           # Removes and returns the last element
+numbers.sort()          # Sorts the list in ascending order
+numbers.reverse()       # Reverses the list
+
+print(numbers)
+
+#Copying Lists (Avoiding Mutable Pitfalls)
+# Incorrect way (references the same list)
+list1 = [1, 2, 3]
+list2 = list1  
+list2.append(4)
+print(list1)  # Output: [1, 2, 3, 4] (Modified unintentionally)
+
+# Correct way (creates a new copy)
+list1 = [1, 2, 3]
+list2 = list1.copy()
+list2.append(4)
+print(list1)  # Output: [1, 2, 3] (Original remains unchanged)
+
+#List Comprehension (Efficient List Creation)
+# Squares of numbers from 1 to 5
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # Output: [1, 4, 9, 16, 25]
+
+# Filtering even numbers
+evens = [x for x in range(10) if x % 2 == 0]
+print(evens)  # Output: [0, 2, 4, 6, 8]
+
+# Nested list comprehension (Flattening a list)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#Using map() and filter() with Lists
+numbers = [1, 2, 3, 4, 5]
+
+# map() applies a function to each element
+squared = list(map(lambda x: x**2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+# filter() selects elements based on a condition
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # Output: [2, 4]
+
+#Nested Lists (2D Lists)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing elements
+print(matrix[0][1])  # Output: 2 (First row, second column)
+
+# Iterating through a matrix
+for row in matrix:
+    for num in row:
+        print(num, end=" ")  # Output: 1 2 3 4 5 6 7 8 9
+
+#Using zip() with Lists
+names = ["Alice", "Bob", "Charlie"]
+scores = [85, 92, 78]
+
+combined = list(zip(names, scores))
+print(combined)  # Output: [('Alice', 85), ('Bob', 92), ('Charlie', 78)]
+
+#Unpacking Lists
+data = [10, 20, 30]
+a, b, c = data
+print(a, b, c)  # Output: 10 20 30
+
+# Using * operator to collect remaining values
+first, *middle, last = [1, 2, 3, 4, 5]
+print(middle)  # Output: [2, 3, 4]
+
+#Finding Maximum, Minimum, and Sum
+numbers = [10, 20, 5, 8, 30]
+
+print(max(numbers))  # Output: 30
+print(min(numbers))  # Output: 5
+print(sum(numbers))  # Output: 73
+
+#Using enumerate() for Index and Value
+fruits = ["apple", "banana", "cherry"]
+
+for index, fruit in enumerate(fruits):
+    print(f"Index {index}: {fruit}")
+
