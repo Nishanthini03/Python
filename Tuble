@@ -1,0 +1,72 @@
+# Tuple with integers
+numbers = (1, 2, 3, 4, 5)
+
+# Tuple with different data types
+mixed = (10, "hello", 3.14, True)
+
+# Single-element tuple (Note the comma)
+single = (5,)
+print(type(single))  # Output: <class 'tuple'>
+
+# Tuple without parentheses (implicit tuple)
+implicit_tuple = 1, 2, 3
+print(type(implicit_tuple))  # Output: <class 'tuple'>
+
+fruits = ("apple", "banana", "cherry")
+
+print(fruits[0])  # Output: apple
+print(fruits[-1])  # Output: cherry (last element)
+
+numbers = (0, 1, 2, 3, 4, 5)
+
+print(numbers[1:4])   # Output: (1, 2, 3)
+print(numbers[:3])    # Output: (0, 1, 2)
+print(numbers[::2])   # Output: (0, 2, 4) (Every second element)
+print(numbers[::-1])  # Output: (5, 4, 3, 2, 1, 0) (Reversed)
+
+fruits = ("apple", "banana", "cherry")
+fruits[0] = "mango"  # This will raise an error: TypeError: 'tuple' object does not support item assignment
+
+# Concatenation
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
+result = t1 + t2  
+print(result)  # Output: (1, 2, 3, 4, 5, 6)
+
+# Repeating
+print(t1 * 3)  # Output: (1, 2, 3, 1, 2, 3, 1, 2, 3)
+
+# Membership Test
+print(2 in t1)  # Output: True
+print(10 in t1) # Output: False
+
+person = ("Alice", 25, "Engineer")
+
+name, age, job = person
+print(name)  # Output: Alice
+print(age)   # Output: 25
+print(job)   # Output: Engineer
+
+# Using * to capture multiple values
+numbers = (1, 2, 3, 4, 5)
+first, *middle, last = numbers
+print(middle)  # Output: [2, 3, 4]
+
+t = (1, 2, 3, 4, 1, 2, 1)
+
+print(t.count(1))  # Output: 3 (Counts occurrences of 1)
+print(t.index(3))  # Output: 2 (Index of first occurrence of 3)
+
+# Convert list to tuple
+numbers_list = [1, 2, 3]
+numbers_tuple = tuple(numbers_list)
+print(numbers_tuple)  # Output: (1, 2, 3)
+
+# Convert tuple to list
+numbers_tuple = (4, 5, 6)
+numbers_list = list(numbers_tuple)
+print(numbers_list)  # Output: [4, 5, 6]
+
+nested = ((1, 2, 3), ("a", "b", "c"))
+
+print(nested[1][2])  # Output: 'c' (Accessing an element inside a nested tuple)
