@@ -1,0 +1,54 @@
+# Simple To-Do List App
+tasks = {}  # Dictionary to store tasks with status
+
+def add_task(task):
+    tasks[task] = "Pending"
+    print(f"Task '{task}' added.")
+
+def view_tasks():
+    if not tasks:
+        print("No tasks available.")
+    else:
+        for task, status in tasks.items():
+            print(f"[{status}] {task}")
+
+def mark_done(task):
+    if task in tasks:
+        tasks[task] = "Completed"
+        print(f"Task '{task}' marked as completed.")
+    else:
+        print("Task not found.")
+
+def delete_task(task):
+    if task in tasks:
+        del tasks[task]
+        print(f"Task '{task}' deleted.")
+    else:
+        print("Task not found.")
+
+while True:
+    print("\nTo-Do List Menu:")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Mark Task as Done")
+    print("4. Delete Task")
+    print("5. Exit")
+    
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        task = input("Enter task: ")
+        add_task(task)
+    elif choice == "2":
+        view_tasks()
+    elif choice == "3":
+        task = input("Enter task to mark as done: ")
+        mark_done(task)
+    elif choice == "4":
+        task = input("Enter task to delete: ")
+        delete_task(task)
+    elif choice == "5":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice! Please enter a valid option.")
