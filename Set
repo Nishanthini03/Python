@@ -1,0 +1,25 @@
+# Using curly braces
+my_set = {1, 2, 3, 4, 5}
+
+# Using set() function
+my_set2 = set([3, 4, 5, 6, 7])
+
+print(my_set)
+print(my_set2)
+
+my_set.add(6)  # Adds 6 to the set
+print(my_set)
+
+my_set.remove(3)  # Removes 3 (raises an error if not found)
+my_set.discard(10)  # Removes 10 (no error if not found)
+my_set.pop()  # Removes a random element
+my_set.clear()  # Clears the set
+
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+print(A | B)  # Union: {1, 2, 3, 4, 5, 6}
+print(A & B)  # Intersection: {3, 4}
+print(A - B)  # Difference: {1, 2}
+print(A ^ B)  # Symmetric Difference: {1, 2, 5, 6}
+
