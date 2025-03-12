@@ -1,0 +1,22 @@
+# Using curly braces
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+# Using dict() function
+my_dict2 = dict(name='Bob', age=30, city='London')
+
+print(my_dict)
+print(my_dict2)
+print(my_dict['name'])   # Output: Alice
+print(my_dict.get('age')) # Output: 25
+
+my_dict['age'] = 26  # Update a value
+my_dict['gender'] = 'Female'  # Add a new key-value pair
+print(my_dict)
+
+my_dict.pop('city')  # Removes 'city' key
+del my_dict['age']  # Deletes 'age' key
+my_dict.clear()  # Removes all elements
+
+print(my_dict.keys())   # Get all keys
+print(my_dict.values()) # Get all values
+print(my_dict.items())  # Get all key-value pairs
