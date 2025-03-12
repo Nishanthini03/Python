@@ -1,0 +1,22 @@
+from abc import ABC, abstractmethod
+
+# Abstract Class
+class Vehicle(ABC):  
+    @abstractmethod
+    def start_engine(self):  
+        pass  # Abstract method
+
+    @abstractmethod
+    def stop_engine(self):
+        pass  # Abstract method
+
+# Concrete Class (Subclass)
+class Car(Vehicle):  
+    def start_engine(self):
+        print("Car engine started!")
+
+    def stop_engine(self):
+        print("Car engine stopped!")
+
+# Trying to create an object of an abstract class will cause an error
+# vehicle = Vehicle()  # This will rai
